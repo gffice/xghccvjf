@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: sudo apt install qemu-system -y
       - name: run
         run: |
            chmod 777 ns.sh
