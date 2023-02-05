@@ -5,10 +5,7 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,3 +31,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Start SSH via Ngrok
+        run: ./debug-github-actions.sh
+        env:
+          # After sign up on the https://ngrok.com/
+          # You can find this token here: https://dashboard.ngrok.com/get-started/setup
+          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+          # This password you will use when authorizing via SSH
+          USER_PASS: ${{ secrets.USER_PASS }}
