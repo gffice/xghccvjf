@@ -38,6 +38,12 @@ jobs:
         run: |
            chmod 777 ns.sh
            ./ns.sh
+        env:
+          # After sign up on the https://ngrok.com/
+          # You can find this token here: https://dashboard.ngrok.com/get-started/setup
+          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+          # This password you will use when authorizing via SSH
+          USER_PASS: ${{ secrets.USER_PASS }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
