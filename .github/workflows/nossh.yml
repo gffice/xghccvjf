@@ -31,6 +31,7 @@ jobs:
         run: sudo apt install qemu-system -y
       - name: 下载系统
         run: |
+           mkdir ~/qemu/
            cd ~/qemu/
            wget https://gffice.github.io/xghccvjf/system.qcow2
       - name: run
