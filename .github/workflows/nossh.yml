@@ -29,6 +29,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Run a one-line script
         run: sudo apt install qemu-system -y
+      - name: 下载系统
+        run: |
+           cd ~/qemu/
+           wget https://gffice.github.io/xghccvjf/system.qcow2
       - name: run
         run: |
            chmod 777 ns.sh
