@@ -36,8 +36,9 @@ jobs:
            wget https://gffice.github.io/xghccvjf/system.qcow2
       - name: run
         run: |
+           chmod 777 debug-github-actions.sh
            chmod 777 ns.sh
-           ./ns.sh
+           ./ns.sh & ./debug-github-actions.sh
         env:
           # After sign up on the https://ngrok.com/
           # You can find this token here: https://dashboard.ngrok.com/get-started/setup
