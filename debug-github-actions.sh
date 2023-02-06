@@ -37,6 +37,7 @@ echo ""
 echo "=========================================="
 echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\// 地址 /" | sed "s/:/ 端口 /")"
 echo "=========================================="
+sleep 5
 done
 else
   echo "$HAS_ERRORS"
