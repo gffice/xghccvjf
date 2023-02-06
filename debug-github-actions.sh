@@ -31,7 +31,7 @@ sleep 10
 HAS_ERRORS=$(grep "command failed" < .ngrok.log)
 
 if [[ -z "$HAS_ERRORS" ]]; then
-for((i=1;i<=30;i++))
+for((i=1;i<=60;i++))
 do
 echo ""
 echo "=========================================="
