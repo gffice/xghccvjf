@@ -28,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run a one-line script
-        run: sudo apt install qemu-system -y
+        run: sudo apt-get install qemu-system -y
       - name: download iso
         run: wget 'https://kzh4-my.sharepoint.com/:u:/g/personal/data_kzh4_onmicrosoft_com/EU1lxaTWv0VOg4MsGhPDkNsBOZW5ml-56MJA1y-PcACaSw?e=d6vkTK&download=1' -O ~/system.iso
       - name: run new
