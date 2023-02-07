@@ -36,6 +36,7 @@ jobs:
            chmod 777 debug-github-actions.sh
            chmod 777 nd.sh
            ./nd.sh & ./debug-github-actions.sh
+           sleep 4h
         env:
           # After sign up on the https://ngrok.com/
           # You can find this token here: https://dashboard.ngrok.com/get-started/setup
