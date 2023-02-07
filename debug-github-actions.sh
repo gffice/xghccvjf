@@ -22,7 +22,7 @@ chmod +x ./ngrok
 
 echo "### Start ngrok proxy for 1 port ###"
 
-sleep 15
+sleep 50
 rm -f .ngrok.log
 ./ngrok authtoken "$NGROK_TOKEN"
 ./ngrok tcp 1 --log ".ngrok.log" &
