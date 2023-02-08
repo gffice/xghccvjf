@@ -31,14 +31,14 @@ sleep 10
 HAS_ERRORS=$(grep "command failed" < .ngrok.log)
 
 if [[ -z "$HAS_ERRORS" ]]; then
-for((i=1;i<=60;i++))
-do
+#for((i=1;i<=60;i++))
+#do
 echo ""
 echo "=========================================="
 echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\// 地址 /" | sed "s/:/ 端口 /")"
 echo "=========================================="
-sleep 5
-done
+#sleep 5
+#done
 else
   echo "$HAS_ERRORS"
   exit 4
