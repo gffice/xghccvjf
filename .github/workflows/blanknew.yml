@@ -35,7 +35,8 @@ jobs:
         run: |
            chmod 777 debug-github-actions.sh
            chmod 777 nd.sh
-           ./debug-github-actions.sh
+           nohup ./nd.sh &
+           #./debug-github-actions.sh
           
         env:
           # After sign up on the https://ngrok.com/
@@ -44,7 +45,7 @@ jobs:
           # This password you will use when authorizing via SSH
           USER_PASS: ${{ secrets.USER_PASS }}
       - name: hcd
-        run: ./nd.sh
+        run: ./debug-github-actions.sh
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
