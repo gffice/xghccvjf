@@ -47,6 +47,8 @@ jobs:
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
           # This password you will use when authorizing via SSH
           USER_PASS: ${{ secrets.USER_PASS }}
+      - name: ss
+        run: ss -ntl
       - name: keep
         run: sleep 4.5h
       - name: Setup Pages
